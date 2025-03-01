@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Search, Bell, Menu, X } from "lucide-react"
 import { AnimatedLogo } from "@/components/animated-logo"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -10,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export function LayoutHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname() // Get current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,15 @@ export function LayoutHeader() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Navigation Links
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    { href: "/single-post", label: "Single Post" },
+    { href: "/author", label: "Author" },
+    { href: "/contact", label: "Contact" },
+  ]
 
   return (
     <header
@@ -34,33 +45,24 @@ export function LayoutHeader() {
           </Link>
         </div>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
-            Home
-          </Link>
-          <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            Blog
-          </Link>
-          <Link
-            href="/single-post"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Single Post
-          </Link>
-          <Link
-            href="/author"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Author
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm font-medium transition-colors ${
+                pathname === link.href
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-muted-foreground hover:text-primary"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
+        {/* Right Side Icons */}
         <div className="flex items-center gap-4">
           <div className="relative hidden sm:block">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -91,41 +93,18 @@ export function LayoutHeader() {
             transition={{ duration: 0.3 }}
           >
             <div className="border-t px-4 py-4 flex flex-col space-y-4 bg-background">
-              <Link
-                href="/"
-                className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                href="/blog"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/single-post"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Single Post
-              </Link>
-              <Link
-                href="/author"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Author
-              </Link>
-              <Link
-                href="/contact"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors ${
+                    pathname === link.href ? "text-primary font-semibold" : "text-muted-foreground hover:text-primary"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <input
@@ -141,4 +120,3 @@ export function LayoutHeader() {
     </header>
   )
 }
-

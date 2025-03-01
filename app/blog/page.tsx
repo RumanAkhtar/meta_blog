@@ -9,14 +9,7 @@ export default function BlogPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1 relative">
-        <Image
-          src="https://sjc.microlink.io/05o4yJuGWxk4Q1CtaakVPbQ0BZYpervPOKSE7tMG3PYR-v9FwFDwpgT_3qDZ2__8tvWIyqYnN57lgQQaxOWi2g.jpeg"
-          alt="Modern workspace background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="fixed inset-0 z-[-1]"
-        />
+     
         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-[-1]" />
 
         {/* Page Title */}
@@ -64,7 +57,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
                   <div className="h-8 w-8 rounded-full overflow-hidden bg-muted">
-                    <Image src="/placeholder.svg?height=80&width=80" alt="Author" width={32} height={32} />
+                    <Image src="https://images.unsplash.com/photo-1740121933286-4340a63c4f97?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Author" width={32} height={32} />
                   </div>
                   <span className="text-sm text-white">Dr. Alan Turing</span>
                 </div>

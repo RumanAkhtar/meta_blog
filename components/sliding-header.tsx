@@ -8,19 +8,19 @@ const featuredPosts = [
   {
     title: "The Impact of Technology on the Workplace: How Technology is Changing",
     category: "Technology",
-    image: "https://images.unsplash.com/photo-1653564142048-d5af2cf9b50f?q=80&w=3130&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80",
   },
   {
     title: "Sustainable Architecture: Building for a Greener Future",
     category: "Architecture",
     image:
-      "https://sjc.microlink.io/JMExGpQCNDGPzegNaBDMA2v5vADkenaJJG_68ytjkaW7DWdQh7wDFszCxwbi2DUZ0TN9e9cgquVsRE7BcACyOg.jpeg",
+      "https://images.unsplash.com/photo-1577628208847-167e003eab07?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "The Rise of Artificial Intelligence in Modern Business",
     category: "Technology",
     image:
-      "https://sjc.microlink.io/pP45SLiCD3N_Zh6UiSKJ-ISQ4pg4YrPUGK2QIwIEi9yRt3gbTTdmXhjpz7aVIGenPFxwIuep2KMlXCc1WvME9g.jpeg",
+      "https://images.unsplash.com/photo-1523724581292-f6c3a950b7ba?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ]
 

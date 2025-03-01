@@ -70,69 +70,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer Sections */}
-        <section className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About */}
-          <div>
-            <h3 className="font-bold mb-4">About</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor malesuada urna eget dolor
-              magna diam ut metus ut neque volutpat.
-            </p>
-            <p className="text-sm mb-1">
-              <strong>Email:</strong> info@metatemplate.net
-            </p>
-            <p className="text-sm">
-              <strong>Phone:</strong> +800 123 456 789
-            </p>
-          </div>
-
-          {/* Quick Link */}
-          <div>
-            <h3 className="font-bold mb-4">Quick Link</h3>
-            <ul className="space-y-2">
-              {["Home", "About", "Blog", "Archived", "Author", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Category */}
-          <div>
-            <h3 className="font-bold mb-4">Category</h3>
-            <ul className="space-y-2">
-              {["Lifestyle", "Technology", "Travel", "Business", "Economy", "Sports"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Weekly Newsletter */}
-          <div>
-            <h3 className="font-bold mb-4">Weekly Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">Get blog articles and offers via email</p>
-            <div className="space-y-2">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full rounded-md border bg-background px-3 py-2 text-sm"
-              />
-              <button className="w-full rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </section>
+        {/* ❌ Removed the Footer Section from here to avoid duplication */}
       </main>
     </div>
   )
 }
-

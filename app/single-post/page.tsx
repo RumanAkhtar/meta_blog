@@ -154,10 +154,10 @@ export default function SinglePostPage() {
           <div className="container mx-auto px-4">
             <div className="flex items-center space-x-4">
               <Image
-                src="https://sjc.microlink.io/RonsgigwCUmN19o43WwiC9fG1H94mafzU_K86JSsZmfG8veIHBJUlhm0ZhZajpV5phxeqIxHSHE5JgddXhck9A.jpeg"
+                src="https://images.unsplash.com/photo-1740121933286-4340a63c4f97?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Jason Francisco"
-                width={80}
-                height={80}
+                width={32}
+                height={32}
                 className="rounded-full"
               />
               <div>
