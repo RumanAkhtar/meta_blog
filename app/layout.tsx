@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MetaBlog - Modern Blog Template",
   description: "A modern blog template built with Next.js and Tailwind CSS",
-  generator: "v0.dev",
   icons: {
     icon: "/favicon.ico", // Standard Favicon
     apple: "/favicon.png", // Apple Touch Icon (Optional)
